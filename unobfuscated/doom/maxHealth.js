@@ -12,21 +12,11 @@
 
 /* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */
 
-/* Update Checker start */
-(async () => { /* This is to prevent "identifier i is already declared errors" */
+(async () => {
     let i = document.createElement('iframe');
     document.body.append(i);
-    window.confirm = i.contentWindow.confirm.bind(window);
+    window.alert = i.contentWindow.alert.bind(window);
     i.remove();
-    Object.values(webpackJsonp.push([[], { ['']: (_, a, b) => { a.cache = b.c }, }, [['']]]).cache).find(x => x.exports?.a?.get).exports.a.get("https://" + (location.host.startsWith("dashboard") ? location.host + "/api/games" : "play.blooket.com/api/gamequestionsets") + "?gameId=6463eb271c035a26d2cfff8a").then(x => parseInt(`0${x.data.questions.find(x => x.question == "../cheats/doom/maxHealth.js")?.answers?.[0]}`)).then(async x => {
-        if (1684270001499 > x || confirm("This cheat is outdated and might be bugged, would you still like to run it? You can find regularly updated cheats here https://github.com/Minesraft2/Blooket-Cheats")) {
-            /* Update Checker end */
-            let i = document.createElement('iframe');
-            document.body.append(i);
-            window.alert = i.contentWindow.alert.bind(window);
-            i.remove();
-            if (window.location.pathname == "/tower/battle") Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode.setState({ myHealth: 100 });
-            else alert("You need to be in battle to run this cheat!");
-        }
-    });
+    if (window.location.pathname == "/tower/battle") Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode.setState({ myHealth: 100 });
+    else alert("You need to be in battle to run this cheat!");
 })();

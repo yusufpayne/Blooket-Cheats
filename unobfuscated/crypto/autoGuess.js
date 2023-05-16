@@ -12,17 +12,7 @@
 
 /* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */
 
-/* Update Checker start */
-(async () => { /* This is to prevent "identifier i is already declared errors" */
-    let i = document.createElement('iframe');
-    document.body.append(i);
-    window.confirm = i.contentWindow.confirm.bind(window);
-    i.remove();
-    Object.values(webpackJsonp.push([[], { ['']: (_, a, b) => { a.cache = b.c }, }, [['']]]).cache).find(x => x.exports?.a?.get).exports.a.get("https://" + (location.host.startsWith("dashboard") ? location.host + "/api/games" : "play.blooket.com/api/gamequestionsets") + "?gameId=6463eb271c035a26d2cfff8a").then(x => parseInt(`0${x.data.questions.find(x => x.question == "../cheats/crypto/autoGuess.js")?.answers?.[0]}`)).then(async x => {
-        if (1684270001464 > x || confirm("This cheat is outdated and might be bugged, would you still like to run it? You can find regularly updated cheats here https://github.com/Minesraft2/Blooket-Cheats")) {
-            /* Update Checker end */
-            let { state } = Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode;
-            if (state.stage == "hack") for (const button of document.querySelector('div[class^=styles__buttonContainer]').children) button.innerText == state.correctPassword && button.click();
-        }
-    });
+(async () => {
+    let { state } = Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode;
+    if (state.stage == "hack") for (const button of document.querySelector('div[class^=styles__buttonContainer]').children) button.innerText == state.correctPassword && button.click();
 })();
