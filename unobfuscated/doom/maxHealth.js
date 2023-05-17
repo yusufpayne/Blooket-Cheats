@@ -17,6 +17,6 @@
     document.body.append(i);
     window.alert = i.contentWindow.alert.bind(window);
     i.remove();
-    if (window.location.pathname == "/tower/battle") Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode.setState({ myHealth: 100 });
+    if (window.location.pathname == "/tower/battle") Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner.stateNode.setState({ myHealth: 100 });
     else alert("You need to be in battle to run this cheat!");
 })();

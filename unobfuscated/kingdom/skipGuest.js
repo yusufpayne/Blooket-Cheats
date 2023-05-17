@@ -13,5 +13,5 @@
 /* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */
 
 (async () => {
-    Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner.stateNode.nextGuest();
+    Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner.stateNode.nextGuest();
 })();

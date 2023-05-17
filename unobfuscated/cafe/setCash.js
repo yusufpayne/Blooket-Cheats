@@ -18,7 +18,7 @@
     window.prompt = i.contentWindow.prompt.bind(window);
     i.remove();
     let cafeCash = Number(parseInt(prompt("How much cash would you like?")));
-    let { stateNode } = Object.values(document.querySelector('#app > div > div'))[1].children[0]._owner;
+    let { stateNode } = Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner;
     stateNode.setState({ cafeCash });
     stateNode.props.liveGameController.setVal({
         path: `c/${stateNode.props.client.name}`,
