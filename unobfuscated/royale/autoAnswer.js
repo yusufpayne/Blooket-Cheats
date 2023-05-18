@@ -13,6 +13,6 @@
 /* THE UPDATE CHECKER IS ADDED DURING COMMIT PREP, THERE MAY BE REDUNDANT CODE, DO NOT TOUCH */
 
 (async () => {
-    let { stateNode } = Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner;
+    let { stateNode } = Object.values(document.querySelector('[id*="app"] > div > div'))[1].children[0]._owner;
     stateNode?.onAnswer?.(true, stateNode.props.client.question.correctAnswers[0]);
 })();

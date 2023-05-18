@@ -17,7 +17,7 @@
     document.body.append(i);
     window.alert = i.contentWindow.alert.bind(window);
     i.remove();
-    const { stateNode } = Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner;
+    const { stateNode } = Object.values(document.querySelector('[id*="app"] > div > div'))[1].children[0]._owner;
     if (stateNode.state.phase !== 'select') alert('You must be on the attribute selection page!');
     else stateNode.setState({ enemyCard: { ...stateNode.state.enemyCard, strength: 0, charisma: 0, wisdom: 0 } });
 })();

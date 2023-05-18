@@ -20,7 +20,7 @@
     })();
     
     try {
-        let { stateNode } = Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner;
+        let { stateNode } = Object.values(document.querySelector('[id*="app"] > div > div'))[1].children[0]._owner;
         if (stateNode.state.stage === "excavate") {
             stateNode.state.choices.length || (stateNode.state.choices = getFossils());
             let max = 0, index = -1;

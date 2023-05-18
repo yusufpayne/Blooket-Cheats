@@ -18,5 +18,5 @@
     window.prompt = i.contentWindow.prompt.bind(window);
     i.remove();
     let guestScore = Number(parseInt(prompt("How many guests do you want?")));
-    Object.values(document.querySelector('body > div > div > div'))[1].children[0]._owner.stateNode.setState({ guestScore });
+    Object.values(document.querySelector('[id*="app"] > div > div'))[1].children[0]._owner.stateNode.setState({ guestScore });
 })();
